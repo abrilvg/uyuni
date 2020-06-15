@@ -1,0 +1,270 @@
+* {
+    box-sizing: border-box;
+    color: #00535e;
+}
+
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+
+img {
+    vertical-align: middle;
+}
+
+body {
+    font-family: 'Roboto Condensed', sans-serif;
+    margin: 0;
+}
+
+header {
+    display: flex;
+    position: fixed;
+    height: 72px;
+    top: 0;
+    right: 0;
+    left: 0;
+    padding: 8px 28.5px;
+    background-color: white;
+    z-index: 10;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+}
+.logo a {
+    display: flex;
+    align-items: center;
+}
+.logo img {
+    height: 40px;
+    margin: 0 2px;
+}
+.logo h1 {
+    display: initial;
+    font-weight: 100;
+    margin: 0 2px;
+}
+header .menu {
+    width: 100%;
+    margin: 0 10vw;
+    display: flex;
+}
+.menu ul {
+    display: inherit;
+    width: 100%;
+    justify-content: space-evenly;
+    padding: 0;
+}
+.menu li {
+    list-style: none;
+}
+header img {
+    height: 30px;
+}
+header .search {
+    display: flex;
+    align-items: center;
+    margin: 0 10px;
+}
+header a {
+    text-decoration: none;
+}
+
+.main {
+    margin-top: 72px;
+    position: relative;
+}
+
+.main img {
+    width: 100%;
+}
+
+.main .title {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main .title h1{
+    text-transform: uppercase;
+    font-size: 80px;
+    margin: 70px 0 0 0;
+}
+
+.discover {
+    margin: 50px 100px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.discover article {
+    position: relative;
+    margin: 10px;
+}
+
+.discover article a {
+    position: relative;
+}
+
+.discover article .image-wrap img {
+    width: 27vw;
+}
+
+.discover article:hover img {
+    opacity: 0.8;
+}
+
+.discover article:hover .image-wrap {
+    background-color: Black;
+}
+
+.discover article:hover .arrow {
+    display: block;
+    z-index: 1;
+}
+
+.get-inspired {
+    position: relative;
+}
+
+.get-inspired img {
+    width: 100%;
+}
+
+.get-inspired .description {
+    position: absolute;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 100%;
+}
+
+.get-inspired .description h1 {
+    font-size: 50px;
+    color: white;
+    font-weight: 400;
+}
+
+.get-inspired .description p {
+    font-size: x-large;
+    color: white;
+    text-shadow: 0px 0px 6px rgba(130, 128, 125, 1);
+}
+
+.get-inspired .description button {
+    border-color: white;
+    background-color: transparent;
+    color: white;
+    border-style: solid;
+    height: 50px;
+    width: 200px;
+    font-size: large;
+    text-transform: uppercase;
+    font-weight: inherit;
+    text-shadow: 0px 0px 6px rgba(130, 128, 125, 1);
+    border-radius: 10px;
+}
+
+.get-inspired .description button:hover {
+    background-color:rgba(211, 211, 211, 0.5);
+}
+
+.information {
+    padding: 50px 100px;
+}
+
+.information .row {
+    display: flex;
+}
+.information .box {
+    width: 33.3%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box .image {
+    width: 100%;
+    height: 100%;
+    transition: all 1s;
+    position: absolute;
+}
+
+.box .image:hover {
+    width: 110%;
+    height: 110%;
+    position: absolute;
+    z-index: 1;
+    transition: all .9s;
+     transition: all 1s;
+}
+.box h1 {
+    font-size: xx-large;
+}
+.box p {
+    margin: 0;
+    font-size: x-large;
+    text-align: center;
+}
+.box img {
+    width: 100%;
+}
+.box .text {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 35px;
+}
+
+.box.description img {
+    opacity: 0;
+}
+
+.footer {
+    background-color: #004165;
+    width: 100%;
+    padding: 20px;
+}
+
+.footer .social {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 0 100px;
+    margin: 20px 0;
+}
+
+.footer .social img {
+    width: 70px;
+}
+
+.footer p {
+    margin: 0;
+    font-size: x-small;
+    font-weight: 300;
+}
+
+.footer h2 {
+    font-weight: 400;
+}
+
+.footer .tourism {
+    display: block;
+    margin: 20px 0;
+    color: white;
+    font-size: small;
+    text-align: end;
+}
+
+.footer p, .footer h2, .footer strong {
+    color: white;
+}
