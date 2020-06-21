@@ -24,6 +24,10 @@ header {
     z-index: 10;
 }
 
+header .colapse-menu {
+    display: none;
+}
+
 .logo {
     display: flex;
     align-items: center;
@@ -34,12 +38,7 @@ header {
     align-items: center;
 }
 .logo img {
-    height: 40px;
-    margin: 0 2px;
-}
-.logo h1 {
-    display: initial;
-    font-weight: 100;
+    height: 100px;
     margin: 0 2px;
 }
 header .menu {
@@ -71,25 +70,36 @@ header a {
 .main {
     margin-top: 72px;
     position: relative;
-}
-
-.main img {
-    width: 100%;
-}
-
-.main .title {
-    position: absolute;
-    width: 100%;
-    height: 100%;
+    background-image: url("../images/uyuni-salt.jpg");
+    background-repeat: no-repeat;
+    background-size: auto;
+    height: 700px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.main .title h1{
+.main .sign h1 {
+    font-family: 'Caveat', cursive;
+    font-size: 250px;
+    margin: 0;
+    color: gold;
+    font-weight: 500;
+    text-align: center;
+}
+
+.main .title {
+    margin-bottom: 50px;
+}
+
+.main .title h1 {
     text-transform: uppercase;
-    font-size: 80px;
-    margin: 70px 0 0 0;
+    font-size: 60px;
+    margin: 0;
+    text-align: center;
+    color: white;
+    text-shadow: 0px 0px 6px rgba(130, 128, 125, 1);
 }
 
 .discover {
@@ -147,6 +157,7 @@ header a {
 
 .get-inspired img {
     width: 100%;
+    height: 800px;
 }
 
 .get-inspired .description {
@@ -162,6 +173,7 @@ header a {
     font-size: 50px;
     color: white;
     font-weight: 400;
+    text-shadow: 0px 0px 6px rgba(130, 128, 125, 1);
 }
 
 .get-inspired .description p {
@@ -257,7 +269,7 @@ header a {
 }
 
 .footer .social img {
-    width: 70px;
+    width: 40px;
 }
 
 .footer p {
@@ -280,4 +292,79 @@ header a {
 
 .footer p, .footer h2, .footer strong {
     color: white;
+}
+
+@media screen and (max-width: 1024px) {
+    header .menu {
+        margin: 0;
+    }
+    .information .box.description p {
+        font-size: large;
+    }
+    .main {
+        height: 580px;
+    }
+    .main .title h1 {
+        font-size: 50px;
+    }
+    .discover {
+        margin: 0;
+    }
+    .discover h1 {
+        font-size: 35px;
+    }
+    .discover .box img {
+        width: 42vw;
+    }
+    .information {
+        padding: 50px 50px;
+    }
+    .information .box h1 {
+        font-size: large;
+        margin: 5px 0;
+    }
+    .information .box .text {
+        padding: 20px;
+    }
+    .information .box.description p {
+        font-size: medium;
+    }
+    .footer h2 {
+        font-size: medium;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .main .title h1 {
+        font-size: 40px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .main .sign h1 {
+        font-size: 180px;
+    }
+    .main .title h1 {
+        font-size: 38px;
+        margin: 0 20px;
+    }
+    .discover h1 {
+        font-size: 27px;
+    }
+    .discover .box img {
+        width: 380px;
+    }
+    .information {
+        padding: 0;
+    }
+    .information .box.description p {
+        font-size: small;
+    }
+    header .menu {
+        visibility: hidden;
+    }
+    header .colapse-menu {
+        display: flex;
+        align-items: center;
+    }
 }
