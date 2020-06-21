@@ -87,6 +87,7 @@ header a {
     color: gold;
     font-weight: 500;
     text-align: center;
+    margin: 0 20px 0 0;
 }
 
 .main .title {
@@ -151,6 +152,14 @@ header a {
     text-shadow: 0px 0px 6px rgba(130, 128, 125, 1);
 }
 
+.discover .box .text h2 {
+    font-size: x-large;
+}
+
+.discover .box .text p {
+    font-size: large;
+}
+
 .get-inspired {
     position: relative;
 }
@@ -202,45 +211,21 @@ header a {
 
 .information {
     padding: 50px 100px;
-}
-
-.information .row {
     display: flex;
 }
-.information .box {
+
+.information .column {
     width: 33.3%;
-    position: relative;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
 }
 
-.information .box .image {
+.information .box {
+    position: relative;
     width: 100%;
     height: 100%;
-    transition: all 1s;
-    position: absolute;
 }
 
-.information .box .image:hover {
-    width: 110%;
-    height: 110%;
-    position: absolute;
-    z-index: 1;
-    transition: all .9s;
-     transition: all 1s;
-}
-.information .box h1 {
-    font-size: xx-large;
-}
-.information .box p {
-    margin: 0;
-    font-size: x-large;
-    text-align: center;
-}
-.information .box img {
-    width: 100%;
-}
 .information .box .text {
     position: absolute;
     display: flex;
@@ -248,10 +233,44 @@ header a {
     align-items: center;
     flex-direction: column;
     padding: 35px;
+    height: 100%;
 }
 
-.information .box.description img {
+.information .box .text h1 {
+    font-size: xx-large;
+}
+.information .box .text p {
+    margin: 0;
+    font-size: x-large;
+    text-align: center;
+}
+
+.information .box .shown {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.information .box .shown img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    transition: all .5s;
+}
+.information .box .shown:hover img{
+    width: 110%;
+    height: 110%;
+    z-index: 1;
+    transition: all .5s;
+}
+
+.hidden img {
     opacity: 0;
+    width: 100%;
 }
 
 .footer {
@@ -338,33 +357,81 @@ header a {
     .main .title h1 {
         font-size: 40px;
     }
-}
-
-@media screen and (max-width: 480px) {
-    .main .sign h1 {
-        font-size: 180px;
-    }
-    .main .title h1 {
-        font-size: 38px;
-        margin: 0 20px;
-    }
-    .discover h1 {
-        font-size: 27px;
-    }
-    .discover .box img {
-        width: 380px;
-    }
     .information {
         padding: 0;
     }
-    .information .box.description p {
-        font-size: small;
+    .information .box .text h1 {
+        font-size: x-large;
     }
+    .information .box .text p {
+        font-size: medium;
+    }
+}
+
+@media screen and (max-width: 750px) {
     header .menu {
         visibility: hidden;
     }
     header .colapse-menu {
         display: flex;
         align-items: center;
+    }
+}
+
+@media screen and (max-width: 583px) {
+    .information .box .text h1 {
+        font-size: medium;
+        margin: 0;
+    }
+    .information .box .text p {
+        font-size: 14px;
+    }
+    .main .title h1 {
+        margin: 0 30px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .main .sign h1 {
+        font-size: 150px;
+    }
+    .main .title h1 {
+        font-size: 35px;
+    }
+    .discover h1 {
+        font-size: 27px;
+    }
+    .discover .box img {
+        width: 100vw;
+    }
+    .discover .box .text p {
+        font-size: x-large;
+    }
+    .discover .box .text h2 {
+        font-size: x-large;
+        margin-bottom: 50px;
+    }
+    .information {
+        flex-wrap: wrap;
+    }
+    .information .box .text h1 {
+        font-size: xx-large;
+        color: white;
+        background-color: rgba(130, 128, 125, 0.5);
+        text-shadow: 0px 0px 6px rgba(130, 128, 125, 1);
+    }
+    .information .box .text p {
+        font-size: x-large;
+        color: white;
+        background-color: rgba(130, 128, 125, 0.5);
+        text-shadow: 0px 0px 6px rgba(130, 128, 125, 1);
+    }
+    .information .column {
+        width: 100%;
+        position: relative;
+    }
+    .information .box.description {
+        position: absolute;
+        z-index: 2;
     }
 }
